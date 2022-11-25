@@ -1,0 +1,32 @@
+
+# don't accidentally track cargo build/test/run outputs
+/target
+
+# in .github/workflows/*.yaml, I tell the jobs to store cargo dumpsters here
+/cargo
+
+/.last
+
+# have to generate this since cargo doesn't do any scm thinking at all even via
+# plugins
+/Cargo.toml
+
+# Tracking this is ass. I'm using git versioning, so literally every time we
+# rebuild it's updating this file. I know you're supposed to, but I'm doing my
+# builds on github actions and I don't really care anyway.
+/Cargo.lock
+
+
+# other forgettable files I seem habitually to create
+file
+file[0-9]
+file.*
+file-?[0-9]*
+
+wtf
+wtf.*
+wtf-?[0-9]*
+
+/.last-action*
+
+# --- sometimes cargo adds stuff below this line and I don't notice ---
