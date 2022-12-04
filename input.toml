@@ -8,7 +8,7 @@
 name = "magnetite"
 version = "UNKNOWN"
 edition = "2021"
-default-run = "knock"
+#default-run = "knock"
 
 [[bin]]
 name = "magnetite"
