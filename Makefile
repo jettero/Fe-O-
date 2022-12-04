@@ -2,7 +2,9 @@ VERSION   := $(shell git describe --dirty --tags --match 'v[0-9][.]*' | sed -e s
 GIT_DIR   := $(shell git rev-parse --git-dir)
 HEADS     := $(GIT_DIR)/HEAD $(shell git show-ref --heads --tags | sed -e 's,.* ,$(GIT_DIR)/,')
 
-default: test
+default: test run
+
+run: test
 
 version: Cargo.toml
 
